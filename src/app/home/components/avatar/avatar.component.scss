@@ -1,0 +1,15 @@
+.avatar-list{
+  ion-col{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 36px;
+    margin-left: -10px;
+    padding-left: 0;
+  }
+  ion-avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

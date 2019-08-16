@@ -1,0 +1,7 @@
+$lightColorFont: #928e8e;
+
+@mixin bold-text{
+  //font-size: 21px;
+  font-weight: bold;
+  color: var(--ion-color-step-600,#666);
+}

@@ -1,0 +1,126 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="返回" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" name="more"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="grid-header">
+    <ion-row class="row-title">
+      <ion-col>
+        <span>文学文摘</span>
+        <span>月刊</span>
+      </ion-col>
+      <ion-col>
+        <ion-button size="small">+ 关注</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row-note">
+      <ion-col>
+        <ion-label>发稿率</ion-label>
+        <ion-note>80%</ion-note>
+      </ion-col>
+      <ion-col>
+        <ion-label>月发文量</ion-label>
+        <ion-note>318</ion-note>
+      </ion-col>
+      <ion-col size="5">
+        <ion-label>影响力</ion-label>
+        <ion-note style="color: #0cd1e8;">9.1</ion-note>
+        <ion-icon class="icon-item"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row class="row-sub-note">
+      <ion-col>
+        <ion-text>JCR-区</ion-text>
+        <ion-label class="point">·</ion-label>
+        <ion-text>中科院-区</ion-text>
+      </ion-col>
+      <ion-col size="7">
+        <ion-text>审稿时间</ion-text>
+        <ion-text>3个月(非官方数据)</ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-grid class="grid-content">
+    <ion-row class="row-title"><ion-col>基本信息</ion-col></ion-row>
+    <ion-row class="row-note">
+      <ion-col size="3"><ion-note>主页地址</ion-note></ion-col>
+      <ion-col>www.hadkjdn.net.cn</ion-col>
+    </ion-row>
+    <ion-row class="row-note">
+      <ion-col size="3"><ion-note>投稿地址</ion-note></ion-col>
+      <ion-col>yilin.xxx.net.cn</ion-col>
+    </ion-row>
+    <ion-row class="row-note">
+      <ion-col size="3"><ion-note>版面费</ion-note></ion-col>
+      <ion-col>1000元/面(非官方数据)</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="grid-comment">
+    <ion-row>
+      <ion-col>
+        <ion-label>评论</ion-label>
+        <ion-note>(2)</ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="grid-comment-item" *ngFor="let item of [1,2,3]">
+    <ion-row class="comment-title">
+      <ion-col size="4">
+        <ion-avatar style="width: 40%;">
+          <img src="../../../../assets/icon/avatar.png" style="width: 38px; height: auto;">
+        </ion-avatar>
+        <ion-label>邹小伟</ion-label>
+      </ion-col>
+      <ion-col><ion-note>2019.07.07</ion-note></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="1.4"></ion-col>
+      <ion-col>
+        加的身份阿卡丽发动机十分了解的时刻房间看到类似飞机克鲁赛德房价看电视了副驾驶的快乐
+        加的身份阿卡丽发动机十分了解的时刻房间看到类似飞机克鲁赛德房价看电视了副驾驶的快乐
+      </ion-col>
+    </ion-row>
+    <ion-row class="row-note-bar">
+      <ion-col size="3">
+        <ion-icon class="thanks"></ion-icon>
+        <ion-note>345</ion-note>
+      </ion-col>
+      <ion-col size="3">
+        <ion-icon class="like"></ion-icon>
+        <ion-note>345</ion-note>
+      </ion-col>
+      <ion-col size="3" (click)="addComment()">
+        <ion-icon class="comment"></ion-icon>
+        <ion-note>34</ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+<!-- Textarea in an item with a floating label -->
+<div class="add-comment-area" *ngIf="isShowCommentArea" [ngStyle]="{'height': commentAreaHeight}">
+  <ion-textarea
+    autofocus
+    rows="3"
+    maxlength="300"
+    placeholder="回复周小伟"
+    [(ngModel)]="currentComment"
+    (ionChange)="onIonChange($event)"
+    style="background: beige;">
+  </ion-textarea>
+  <div class="bottom-bar">
+    <ion-note>{{commentLength}}/300</ion-note>
+    <ion-button size="small" (click)="sendComment()">发表</ion-button>
+  </div>
+</div>

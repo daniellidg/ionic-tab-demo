@@ -1,0 +1,28 @@
+.note-bar{
+  ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span:first-child{
+      color: $lightColorFont;
+    }
+    span:last-child{
+      @include bold-text;
+      margin: 0 4px;
+    }
+    img{
+      width: 811px; height: 1026px;
+      background: url('../../../assets/icon/icons.png') -10px -10px;
+    }
+    .note-icon{
+      width: 36px;
+      height: 36px;
+      background-image: url('../../../assets/icon/icons.png');
+      background-position: -713px -210px;
+    }
+  }
+  ion-col:last-child{
+    justify-content: flex-end;
+  }
+}

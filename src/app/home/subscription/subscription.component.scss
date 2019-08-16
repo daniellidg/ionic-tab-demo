@@ -1,0 +1,20 @@
+.row-title{
+  ion-col:first-child{
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  ion-col:last-child{
+    color: #0cd1e8;
+  }
+}
+.row-content{
+  ion-col{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+}

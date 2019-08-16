@@ -1,0 +1,54 @@
+@import "../../../../../theme/local";
+
+.grid-header{
+  .row-title{
+    margin: 1px 0;
+    ion-col:first-child{
+      margin: auto;
+      span:first-child{
+        font-weight: bold;
+        font-size: 20px;
+      }
+      span:last-child{
+        color: #0cd1e8;
+        border: 1px solid;
+        margin-left: 10px;
+      }
+    }
+    ion-col:last-child{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .icon-item{
+      width: 26px;
+      height: 26px;
+      background-image: url('../../../../../assets/icon/icons.png');
+      background-position: -241px -220px;
+    }
+  }
+
+  .row-note{
+    .note-item{
+      margin-right: .5rem;
+    }
+    ion-col{
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+    ion-note{
+      margin: 0 5px;
+    }
+  }
+
+  .row-sub-note{
+    color: $lightColorFont;
+    .point{
+      margin: 0 5px;
+    }
+    ion-col:last-child{
+      text-align: right;
+    }
+  }
+}

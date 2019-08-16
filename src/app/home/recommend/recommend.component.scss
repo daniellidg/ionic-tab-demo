@@ -1,0 +1,45 @@
+@import "../../../theme/local";
+
+.row-title{
+  font-weight: bold;
+}
+.row-sub-title{
+  margin: 5px 0;
+  .col-time{
+    padding-left: 0;
+  }
+}
+.row-content{
+  color: $lightColorFont;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 0rem auto;
+  padding-bottom: 0;
+}
+.row-note-bar{
+  margin-left: -10px;
+  ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span:first-child{
+      color: $lightColorFont;
+    }
+    span:last-child{
+      @include bold-text;
+      margin: 0 4px;
+    }
+    .note-icon{
+      width: 36px;
+      height: 36px;
+      background-image: url('../../../assets/icon/icons.png');
+      background-position: -490px -210px;
+    }
+  }
+  ion-col:last-child{
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,29 @@
+<ion-content>
+  <ng-container *ngIf="!showNewHeader">
+    <ion-searchbar placeholder="输入书名或者作者名"></ion-searchbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col
+          class="col-tab"
+          *ngFor="let item of segmentOptions"
+          [ngClass]="{'selected': this.currentSegmentValue === item.value}"
+          (click)="segmentChanged(item)">{{item.label}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-container>
+  <app-tabsearchbar
+    *ngIf="showNewHeader"
+    [tabData]="segmentOptions"
+    [currentSelectTab]="currentSegmentValue"
+    (onTabChange)="segmentChanged($event)"></app-tabsearchbar>
+  
+  <ion-content
+    [scrollEvents]="true"
+    (ionScroll)="logScrolling($event)"
+  >
+    <app-attention *ngIf="currentSegmentValue === 'attention'"></app-attention>
+    <app-recommend *ngIf="currentSegmentValue === 'recommend'"></app-recommend>
+    <app-subscription *ngIf="currentSegmentValue === 'subscription'"></app-subscription>
+    <div style="height: 50px; background: transparent;"></div>
+  </ion-content>
+</ion-content>

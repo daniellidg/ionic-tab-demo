@@ -1,0 +1,10 @@
+<ion-row class="avatar-list">
+  <ng-container *ngFor="let item of avatarData">
+    <ion-col size="4">
+      <ion-avatar>
+        <img src="{{item.imgUrl}}" style="width: 21px; height: auto;">
+      </ion-avatar>
+      <ion-label>{{item.name}}</ion-label>
+    </ion-col>
+  </ng-container>
+</ion-row>

@@ -1,0 +1,141 @@
+@import "../../../../theme/local";
+
+ion-note{
+  color: $lightColorFont;
+}
+
+.grid-header{
+  .row-title{
+    margin: 1px 0;
+    ion-col:first-child{
+      margin: auto;
+      span:first-child{
+        font-weight: bold;
+        font-size: 20px;
+      }
+      span:last-child{
+        color: #0cd1e8;
+        border: 1px solid;
+        margin-left: 10px;
+      }
+    }
+    ion-col:last-child{
+      text-align: right;
+      ion-button{
+        font-size: 16px;
+      }
+    }
+  }
+
+  .row-note{
+    ion-text{
+      margin: 0 5px;
+    }
+
+    .icon-item{
+      width: 26px;
+      height: 26px;
+      background-image: url('../../../../assets/icon/icons.png');
+      background-position: -241px -220px;
+    }
+    ion-col{
+      display: flex;
+      align-items: center;
+    }
+    ion-col:last-child{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+
+  .row-sub-note{
+    color: $lightColorFont;
+    .point{
+      margin: 0 5px;
+    }
+    ion-col:last-child{
+      text-align: right;
+    }
+  }
+}
+
+.grid-content{
+  border-top: 10px solid #eee;
+  .row-title{
+    font-weight: bold;
+  }
+  .row-note{
+    ion-col:first-child{
+    }
+    ion-col:last-child{
+      text-align: left;
+    }
+  }
+}
+
+.grid-comment{
+  ion-label{
+    font-weight: bold;
+  }
+  ion-note{
+    margin: 0 5px;
+  }
+}
+
+.grid-comment-item{
+  .comment-title{
+    height: 38px;
+    ion-col{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    ion-col:last-child{
+      justify-content: flex-end;
+    }
+  }
+  .row-note-bar{
+    justify-content: flex-end;
+
+    ion-col{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      ion-note{
+        margin: 0 5px;
+      }
+    }
+  }
+  .thanks{
+    width: 26px;
+    height: 26px;
+    background-image: url('../../../../assets/icon/icons.png');
+    background-position: -566px -327px;
+  }
+  .like{
+    width: 26px;
+    height: 26px;
+    background-image: url('../../../../assets/icon/icons.png');
+    background-position: -636px -327px;
+  }
+  .comment{
+    width: 26px;
+    height: 26px;
+    background-image: url('../../../../assets/icon/icons.png');
+    background-position: -718px -215px;
+  }
+}
+
+.add-comment-area{
+  padding: 10px;
+  ion-textarea{
+    background: beige;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .bottom-bar{
+
+  }
+}

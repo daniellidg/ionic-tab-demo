@@ -1,0 +1,14 @@
+ion-col{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+ion-col:last-child{
+  justify-content: flex-end;
+}
+.search-icon{
+  width: 36px;
+  height: 36px;
+  background-image: url('../../../../assets/icon/icons.png');
+  background-position: -1460px -210px;
+}

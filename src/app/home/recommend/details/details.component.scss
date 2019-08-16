@@ -1,0 +1,57 @@
+@import "../../../../theme/local";
+
+.col-title{
+  display: flex;
+  align-items: center;
+
+  .sub-title{
+    margin: 0 10px;
+
+    ion-note{
+      margin: 0 5px;
+      font-size: 14px;
+    }
+  }
+}
+.row-content{
+  .words{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+  .ellipsis{
+    position: absolute;
+    right: 33px;
+    top: 60px;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+  }
+  .expand{
+    position: absolute;
+    right: 0;
+    top: 64px;
+    background: #fff;
+    color: #0cd1e8;
+  }
+}
+.tab-bar{
+  border-top: 8px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+  margin-top: 4px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  div{
+    margin: 0 16px;
+    position: relative;
+  }
+
+  .active{
+    color: #0cd1e8;
+    border-bottom: 2px solid #0cd1e8;
+  }
+}

@@ -1,0 +1,36 @@
+<ion-card *ngFor="let item of [1,2,3,4]">
+  <ion-grid>
+    <ion-row class="row-title">
+      <span>基于用户心智模型的图侦软件</span>
+    </ion-row>
+    <ion-row class="row-sub-title">
+      <ion-col size="3" class="col-time">2019.08</ion-col>
+      <ion-col>浙江工业大学学报</ion-col>
+    </ion-row>
+    <ion-row class="row-content" (click)="goTo('/details')">
+      发生大连房价按开了房间SD卡福建省大两房杰拉德激发的了房间爱克林顿罚款了福建奥地利
+      发生大连房价按开了房间SD卡福建省大两房杰拉德激发的了房间爱克林顿罚款了福建奥地利
+    </ion-row>
+    <app-avatar [avatarData]="avatarData"></app-avatar>
+    <ion-row class="row-note-bar" justify-content-center nowrap>
+      <ion-col size="3">
+        <span>关注</span>
+        <span>33</span>
+      </ion-col>
+      <ion-col style="max-width: 0;">•</ion-col>
+      <ion-col size="3">
+        <span>关注</span>
+        <span>33</span>
+      </ion-col>
+      <ion-col style="max-width: 0;">•</ion-col>
+      <ion-col size="3">
+        <span>关注</span>
+        <span>33</span>
+      </ion-col>
+      <ion-col>
+        <span></span>
+        <span class="note-icon"></span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

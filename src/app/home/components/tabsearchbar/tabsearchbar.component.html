@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        size="2"
+        *ngFor="let item of tabData"
+        (click)="onTabChanged(item)"
+        [ngClass]="{'selected': this.currentSelectTab === item.value}"
+      >{{item.label}}</ion-col>
+      <!--<ion-col size="2">关注</ion-col>-->
+      <!--<ion-col size="2" class="selected">推荐</ion-col>-->
+      <!--<ion-col size="2">订阅</ion-col>-->
+      <ion-col><span class="search-icon"></span></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>

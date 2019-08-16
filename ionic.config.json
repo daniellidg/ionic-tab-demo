@@ -1,0 +1,10 @@
+{
+  "name": "tabapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "hooks":{
+    "build:after": "./attach-source-maps.js"
+  },
+  "type": "angular"
+}

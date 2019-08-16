@@ -1,0 +1,21 @@
+.row-item{
+  display: flex;
+  align-items: center;
+
+  .avatar{
+    display: flex;
+    align-items: center;
+  }
+
+  ion-col:last-child{
+    text-align: right;
+  }
+
+  .influence{
+    margin-top: .3rem;
+
+    ion-note{
+      margin-right: .3rem;
+    }
+  }
+}

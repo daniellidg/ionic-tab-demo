@@ -1,0 +1,56 @@
+@import "../../../theme/local";
+
+.row-title{
+  ion-col:first-child{
+    span:first-child{
+      @include bold-text;
+    }
+    span:last-child{
+      margin: 0 0.5rem;
+      color: $lightColorFont;
+    }
+  }
+  ion-col:last-child{
+    text-align: right;
+    color: $lightColorFont;
+  }
+}
+.row-sub-title{
+  ion-col span{
+    @include bold-text;
+  }
+}
+.row-content{
+  ion-col{
+    color: $lightColorFont;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding-bottom: 0;
+  }
+}
+.row-note-bar{
+  ion-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span:first-child{
+      color: $lightColorFont;
+    }
+    span:last-child{
+      @include bold-text;
+      margin: 0 4px;
+    }
+    .note-icon{
+      width: 36px;
+      height: 36px;
+      background-image: url('../../../assets/icon/icons.png');
+      background-position: -713px -210px;
+    }
+  }
+  ion-col:last-child{
+    justify-content: flex-end;
+  }
+}
